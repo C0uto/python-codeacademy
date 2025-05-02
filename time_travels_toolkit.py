@@ -16,4 +16,4 @@ cost = base_cost * cost_multiplier
 travels = choice(['Lisboa', 'Londres', 'Nova Iorque', 'Tokio'])
 
 print(custom_module.generate_time_travel_message(year, travels ,cost))
-print(custom_module.generate_time_travel_message(year, travels ,cost).replace(' ', '_'))
+
