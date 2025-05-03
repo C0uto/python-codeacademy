@@ -14,13 +14,13 @@ class Key:
 		check_digit_count = 0
 		chunks = self.key.split('-')
 		for chunk in chunks:
-			if len(chunk) != 4:
+			if len(chunk) != 5:
 				return False
 			for char in chunk:
 				if char == check_digit:
 					check_digit_count += 1
 				score += ord(char)
-		if score == 1772 and check_digit_count == 5:
+		if score == 1234:
 			return True
 		return False
 
@@ -34,7 +34,7 @@ class Key:
 				char = random.choice(alphabet)
 				key += char
 				chunk += char
-				if len(chunk) == 4:
+				if len(chunk) == 5:
 					key += '-'
 					chunk = ''
 			key = key[:-1]
@@ -48,5 +48,7 @@ class Key:
 		if self.verify():
 			valid = 'Valid'
 		return self.key.upper() + ':' + valid
+	
+print(Key())
 	
 
