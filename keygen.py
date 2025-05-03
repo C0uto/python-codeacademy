@@ -48,3 +48,5 @@ class Key:
 		if self.verify():
 			valid = 'Valid'
 		return self.key.upper() + ':' + valid
+	
+
