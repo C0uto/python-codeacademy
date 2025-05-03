@@ -20,7 +20,7 @@ class Key:
 				if char == check_digit:
 					check_digit_count += 1
 				score += ord(char)
-		if score == 1234:
+		if score == 1234 and check_digit_count == 2:
 			return True
 		return False
 
@@ -49,6 +49,7 @@ class Key:
 			valid = 'Valid'
 		return self.key.upper() + ':' + valid
 	
+key = Key('aaaaa-bbbbb-12345')
 print(Key())
 	
 
