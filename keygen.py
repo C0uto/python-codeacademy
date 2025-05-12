@@ -20,7 +20,7 @@ class Key:
 				if char == check_digit:
 					check_digit_count += 1
 				score += ord(char)
-		if score == 1234 and check_digit_count == 2:
+		if score == 1772 and check_digit_count == 2:
 			return True
 		return False
 
@@ -30,7 +30,7 @@ class Key:
 		check_digit_count = 0
 		alphabet = 'abcdefghijklmnopqrstuvwxyz1234567890'
 		while True:
-			while len(key) < 25:
+			while len(key) < 18:
 				char = random.choice(alphabet)
 				key += char
 				chunk += char
@@ -49,7 +49,6 @@ class Key:
 			valid = 'Valid'
 		return self.key.upper() + ':' + valid
 	
-key = Key('aaaaa-bbbbb-12345')
 print(Key())
 	
 
